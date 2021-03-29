@@ -12,10 +12,10 @@ public class playerMove : MonoBehaviour
     Vector3 movement;
 
     //inclass stuff is below
-    private bool reachedPos = true;
-    private bool stopMovement = false;
-    private Vector3 nextPos;
-    private bool hitItem = false;
+    //private bool reachedPos = true;
+    //private bool stopMovement = false;
+    //private Vector3 nextPos;
+    //private bool hitItem = false;
 
     public float sightDist;
     Animator myAnim;
@@ -25,7 +25,6 @@ public class playerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         myAnim = spriteObject.GetComponent<Animator>();
     }
 

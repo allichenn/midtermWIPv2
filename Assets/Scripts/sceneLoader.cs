@@ -5,15 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class sceneLoader : MonoBehaviour
 {
+
+    public GameObject startScreen, instructionScreen;
+
+    void Start()
+    {
+        instructionScreen.SetActive(false);
+        startScreen.SetActive(true);
+    }
+
     public void loadGame(){
         SceneManager.LoadScene("levelOne");
     }
 
     public void goBack(){
-        SceneManager.LoadScene("menu");
+        //SceneManager.LoadScene("menu");
+        startScreen.SetActive(true);
+        instructionScreen.SetActive(false);
     }
 
     public void goInstructions(){
-        SceneManager.LoadScene("instructions");
+        //SceneManager.LoadScene("instructions");
+        startScreen.SetActive(false);
+        instructionScreen.SetActive(true);
     }
 }
